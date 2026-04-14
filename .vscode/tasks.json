@@ -2,15 +2,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build and run cpp",
+      "label": "build cpp",
       "type": "shell",
-      "command": "powershell",
+      "command": "g++",
       "options": {
         "cwd": "${fileDirname}"
       },
       "args": [
-        "-Command",
-        "Clear-Host; g++ \"${fileBasename}\" -o \"temp_run.exe\"; if ($?) { & \".\\temp_run.exe\" }"
+        "${fileBasename}",
+        "-o",
+        "temp_run.exe"
       ],
       "group": {
         "kind": "build",
@@ -20,7 +21,7 @@
       "presentation": {
         "echo": false,
         "reveal": "silent",
-        "focus": true,
+        "focus": false,
         "panel": "dedicated",
         "showReuseMessage": false,
         "clear": true
