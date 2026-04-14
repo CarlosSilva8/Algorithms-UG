@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run cpp",
+      "type": "shell",
+      "command": "powershell",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "args": [
+        "-Command",
+        "Clear-Host; g++ \"${fileBasename}\" -o \"temp_run.exe\"; if ($?) { & \".\\temp_run.exe\" }"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    }
+  ]
+}
