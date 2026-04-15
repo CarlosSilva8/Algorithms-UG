@@ -28,13 +28,16 @@ void bloco2() {
     Tipos de dados:
     int: 1, 0, -50, 100
     float: 0.5, 3.7
+    double: 0.57985
     bool: true, false
     string: "Ola mundo"
     char: "a", "x", "8", ":"
+    wchat_t: caracteres que usam 2 bytes ao invés de 1
+    void: vazio
 */
 }
-/*
-Bloco 3 - User Input and Constants           */
+
+// Bloco 3 - User Input and Constants           
 void bloco3(){
    
     cout << "Executando o Bloco 3:\n";
@@ -45,12 +48,15 @@ void bloco3(){
     cin >> n;  //character input junto com o operador de extração ">>"
     cout << "Voce digitou: " << n << endl;
     */
-    int n, x;
-    cout << "Digite o primeiro numero: " << endl;
+    int n, x, soma;
+    cout << "Digite o primeiro numero: ";
     cin >> n;
-    cout << "Digite o segundo numero: " << endl;
+    cin.clear(); // .clear() é um método usado para esvaziar contêineres da STL (como std::vector, std::string, std::map). Ele remove todos os elementos, definindo o tamanho do contêiner como 0.
+    cin.ignore(1000, '\n'); // .ignore() (especificamente std::istream::ignore) é usada para extrair e descartar caracteres do buffer de entrada. Ela é fundamental para evitar erros de leitura quando você alterna entre diferentes métodos de entrada, como cin >> e getline(). 
+    cout << "Digite o segundo numero: ";
     cin >> x;
-    cout << "\nResultados:\n" << n << endl << x;
+    soma = n + x;
+    cout << "\nResultados:\n" << soma << endl;
 }
 
 // Função Main gerencia o inicio, execução e finalização das tarefas. Int indica que ao final da execução, um número inteiro será retornado
@@ -59,6 +65,5 @@ int main() {
     return 0; // retorna o zero como indicativo de sucesso na execução do bloco. Process returned 0 (0x0)   execution time : 1.407 s
 
 } // Todo o bloco dentro das chaves é executado em uma run em ordem sequencial
-
 
 
