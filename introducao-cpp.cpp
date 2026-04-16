@@ -59,9 +59,58 @@ void bloco3(){
     cout << "\nResultados:\n" << soma << endl;
 }
 
+// Bloco 4 - Arithmetic 
+
+void bloco4(){
+    /*
+    Aritmeticos:
+    Operadores:
+    Basicos: +, -, /, *
+    Compostos: -=, +=, ++ (adiciona 1), -- (subtrai 1), *=, /=
+
+    Ordem dos operadores:
+
+    C olchetes 
+    E xpoentes
+    D ivisão
+    M ultiplicação
+    A dição
+    S ubtração
+
+    Comparação (Retornam true [1] ou false [0]):
+    Maior que: <
+    Menor que: >
+    Menor ou igual: <=
+    Maior ou igual: >=
+    Diferente de: !=
+    Equivalente a: == 
+    */
+    float x;
+    double y;
+    bool teste1 = 'a' < 'B'; // Maiúsculas e minúsculas possuem valores específicos em ASCII
+    x = 2.00;
+    y = 2;
+    bool teste = x == y;
+/*
+    int n1, n2;
+    cout << "Escreva o primeiro número: ";
+    cin >> n1;
+    cout << "Escreva o segundo número: ";
+    cin >> n2; 
+    cout << "Esses números são os mesmos? " << (n1 == n2); */
+/*
+    Operadores Lógicos:
+    NOT: !
+    AND: &&
+    OR: ||
+    */
+    bool teste2 = !(true || !true && true) && true;
+    cout << teste2;
+}
+
 // Função Main gerencia o inicio, execução e finalização das tarefas. Int indica que ao final da execução, um número inteiro será retornado
 int main() {
-    bloco3();
+    bloco4();
     return 0; // retorna o zero como indicativo de sucesso na execução do bloco. Process returned 0 (0x0)   execution time : 1.407 s
 
 } // Todo o bloco dentro das chaves é executado em uma run em ordem sequencial
