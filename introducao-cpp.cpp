@@ -59,7 +59,7 @@ void bloco3(){
     cout << "\nResultados:\n" << soma << endl;
 }
 
-// Bloco 4 - Arithmetic 
+// Bloco 4 - Operadores
 
 void bloco4(){
     /*
