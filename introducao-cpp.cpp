@@ -108,9 +108,33 @@ void bloco4(){
     cout << teste2;
 }
 
+// Bloco 5 - if, else & else if
+void bloco5(){
+    /*
+    if (condição){
+    código rodado se a condição for true}
+    int x = 5;
+    if (x < 8){
+        x += 1;
+        cout << x;
+    };
+    */
+    int x;
+    cin >> x;
+    float x_1 = x % 2;
+    if (x == 10 || x == 100) {
+        cout << x << " é meu número favorito!";
+    } else if (x_1 == 1){
+        cout << "Até que gosto do número " << x;
+    }else {
+        cout << "Não gosto do número " << x;
+
+    }
+}
+
 // Função Main gerencia o inicio, execução e finalização das tarefas. Int indica que ao final da execução, um número inteiro será retornado
 int main() {
-    bloco4();
+    bloco5();
     return 0; // retorna o zero como indicativo de sucesso na execução do bloco. Process returned 0 (0x0)   execution time : 1.407 s
 
 } // Todo o bloco dentro das chaves é executado em uma run em ordem sequencial
