@@ -11,9 +11,16 @@ int main(){
     a quantidade de linhas que serão printadas */
     for (int i = 1; i<=n; i+=1){ // i inicia em um, o loop se repetirá N vezes os passos abaixo
             // A primeira parte do for_loop_i é o for_loop_j
-        for (int j = i; j<=n; j+=1){ // j recebe o valor i da i-ésima repetição, repetindo n-i vezes enquanto j<=n
+        for (int j = i; j<n; j+=1){ // j recebe o valor i da i-ésima repetição, repetindo n-i vezes enquanto j<=n
+                    cout << " ";
+        }
+        for (int y=2;y<=i;y+=1){
+            if (i > 1){
+                cout << "*";
+            }
+        }
+        for (int z=1;z<=i;z+=1){
             cout << "*";
-
         }
         cout << endl;
     }
