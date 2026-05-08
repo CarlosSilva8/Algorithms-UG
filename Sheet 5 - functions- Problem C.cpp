@@ -1,47 +1,41 @@
 #include <iostream>
+#include <cmath>
+#include <string>
+#include <algorithm>
 using namespace std;
 
 
-long long binario(long long x){
-long long resultado = 0;
-        long long resto = x;
-        while (resto >= 1){
-            if (resto%2 == 1){
-                resultado += 1;
+string binario(long long x){
+    string binary = "";
+        while (x != 0){
+            long long r = x%2;
+            if (r == 0){
+                binary = "0" + binary;
+            }else{
+                binary = "1" + binary;
             }
-            resto /= 2;
+            x = x/2;;
         }
-        long long conversor = 0;
-        for (long long j=1; j<=resultado; j+=1){
-            conversor = conversor * 2 + 1;
-        }
-        return conversor;
+        return binary;
 }
 
 
-void wonderful(long long y, long long conversor2){
-    if (y%2 != 0){
-        if (conversor2 == y && conversor2%2 != 0){
-            cout << "YES";
-        }else if (conversor2 != y){
-            cout << "NO";
+string wonderful(long long y, string b){
+        string palindromo = b;
+        reverse(palindromo.begin(), palindromo.end());
+        if (palindromo == b && y%2 !=0){
+            cout << "YES" << endl;
+        }else{
+            cout << "NO" << endl;
         }
-    }else if (y%2 == 0){
-       cout << "NO";
-    }
+    return "";
 }
 
 
 int main(){
     long long a;
     cin >> a;
-    if (a%2 != 0){
-    long long k = binario(a);
-    wonderful(a, k);
-    }else{
-        cout << "NO";
-    }
-
+    cout << wonderful(a, binario(a));
 
 return 0;
 }
